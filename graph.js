@@ -39,4 +39,13 @@ class Graph {
         }
         delete this.adjacencyList[vertex]
     }
+    
+    dfs(vertex){
+        // if vertex is empty return (base case)
+        // add vertex to results list
+        // mark vertex as visited
+        // for each neighbor in vertex's neighbors
+            // if neighbor is not visited, recursively call dfs on neighbor
+        
+    }
 }
