@@ -43,17 +43,28 @@ class Graph {
     depthFirstRecursive(start){
         const result = []
         const visited = {}
+        const adjacencyList = this.adjacencyList
+        // preserve the value/scope of `this` to use in helper function below
 
         (function dfs(vertex){
             if (!vertex) return null
             // if vertex is empty return (base case)
-        })
-        // add vertex to results list
-        // mark vertex as visited
+            visited[vertex] = true
+            // mark vertex as visited
             // visited is a boolean value in key value pair
-        // for each neighbor in vertex's neighbors
-            // if neighbor is not visited, recursively call dfs on neighbor
-        // recursive 
+            result.push(vertex)
+            // add vertex to results list
+            adjacencyList[vertex].forEach (neighbor => {
+                // for each neighbor in vertex's neighbors
+                if (!visited[neighbor]){
+                    return dfs(neighbor)
+                // if neighbor is not visited, recursively call dfs on neighbor
+                }
+            })
 
+        })(start)
+
+        return result
     }
+
 }
