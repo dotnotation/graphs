@@ -67,4 +67,17 @@ class Graph {
         return result
     }
 
+    depthFirstIterative(start){
+        const result = []
+        const visited = {}
+        let s = []
+        // let s be a stack
+        s.push(start)
+
+        while (!s){
+            vertex = s.pop()
+            
+        }
+    }
+
 }
