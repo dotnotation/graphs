@@ -70,14 +70,18 @@ class Graph {
     depthFirstIterative(start){
         const result = []
         const visited = {}
-        let s = []
-        // let s be a stack
-        s.push(start)
+        let s = [start]
+        // let s be a stack with start included 
 
         while (!s){
             vertex = s.pop()
-            
+            // if vertex hasn't been visited
+            if 
+            // mark it as visited
+            // add to result list
+            // push all neighbors to stack
         }
+        // this will be in a different order than our recursive function
     }
 
 }
