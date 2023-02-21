@@ -37,5 +37,6 @@ class Graph {
             const adjacentVertex = this.adjacencyList[vertex].pop()
             this.removeEdge(vertex, adjacentVertex)
         }
+        delete this.adjacencyList[vertex]
     }
 }
