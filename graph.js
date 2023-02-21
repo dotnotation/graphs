@@ -40,12 +40,20 @@ class Graph {
         delete this.adjacencyList[vertex]
     }
     
-    dfs(vertex){
-        // if vertex is empty return (base case)
+    depthFirstRecursive(start){
+        const result = []
+        const visited = {}
+
+        (function dfs(vertex){
+            if (!vertex) return null
+            // if vertex is empty return (base case)
+        })
         // add vertex to results list
         // mark vertex as visited
+            // visited is a boolean value in key value pair
         // for each neighbor in vertex's neighbors
             // if neighbor is not visited, recursively call dfs on neighbor
-        
+        // recursive 
+
     }
 }
