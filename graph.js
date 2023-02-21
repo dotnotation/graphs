@@ -21,4 +21,21 @@ class Graph {
         this.adjacencyList[v1].push(v2)
         this.adjacencyList[v2].push(v1)
     }
+
+    removeEdge(v1, v2){
+        // accepts two vertices
+        // reassign the key of v1 to be an array that no longer contains v2 and vice versa
+        this.adjacencyList[v1] = this.adjacencyList[v1].filter(v => v !== v2)
+        this.adjacencyList[v2] = this.adjacencyList[v2].filter(v => v !== v1)
+    }
+
+    removeVertex(vertex){
+        // accepts a vertex
+        // should loop as long as there an any other vertices in the adjacencyList for that vertex
+        // inside loop call removeEdge 
+        while (this.adjacencyList[vertex].length){
+            const adjacentVertex = this.adjacencyList[vertex].pop()
+            this.removeEdge(vertex, adjacentVertex)
+        }
+    }
 }
