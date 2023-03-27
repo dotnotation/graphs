@@ -71,21 +71,26 @@ class Graph {
         const result = []
         const visited = {}
         const stack = [start]
-        let currentVertex
         // let s be a stack with start included 
+        let currentVertex
+        // stores what we are popping off
 
         visited[start] = true
         while (stack.length){
             // while there is something in the stack
             currentVertex = stack.pop()
-            // stores what we are popping off
             result.push(currentVertex)
             // add currentVertex to the result array
-            // if vertex hasn't been visited
-            if 
-            // mark it as visited
-            // add to result list
-            // push all neighbors to stack
+            this.adjacencyList[currentVertex].forEach(neighbor => {
+                // find the neighbors of the currentVertex
+                if(!visited[neighbor]){
+                    // if vertex hasn't been visited
+                    visited[neighbor] = true
+                    // mark it as visited
+                    stack.push(neighbor)
+                    // push all neighbors to stack
+                }
+            })
         }
         // this will be in a different order than our recursive function
     }
