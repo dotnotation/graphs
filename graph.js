@@ -71,12 +71,13 @@ class Graph {
         const result = []
         const visited = {}
         const stack = [start]
+        let currentVertex
         // let s be a stack with start included 
 
         visited[start] = true
         while (stack.length){
             // while there is something in the stack
-            let currentVertex = stack.pop()
+            currentVertex = stack.pop()
             // stores what we are popping off
             result.push(currentVertex)
             // add currentVertex to the result array
