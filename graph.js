@@ -70,11 +70,16 @@ class Graph {
     depthFirstIterative(start){
         const result = []
         const visited = {}
-        let s = [start]
+        const stack = [start]
         // let s be a stack with start included 
 
-        while (!s){
-            vertex = s.pop()
+        visited[start] = true
+        while (stack.length){
+            // while there is something in the stack
+            let currentVertex = stack.pop()
+            // stores what we are popping off
+            result.push(currentVertex)
+            // add currentVertex to the result array
             // if vertex hasn't been visited
             if 
             // mark it as visited
