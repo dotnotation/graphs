@@ -92,7 +92,8 @@ class Graph {
                 }
             })
         }
-        // this will be in a different order than our recursive function
+        return result
+        // this will be in a different order than our recursive function due to pop
     }
 
 }
