@@ -70,3 +70,4 @@ Graphs:
 		- you go to the immediate neighbors of one vertex
 			- so in the below picture you would start at 0 and go to 1 and 4 before going to any other vertex 
 			- traversal via height or how many jumps away from the root
+				- everything on the same height is visited first before going down a level
