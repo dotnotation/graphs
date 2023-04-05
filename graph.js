@@ -107,10 +107,23 @@ class Graph {
         const result = []
         // create an object to store nodes visited
         const visited = {}
+        let currentVertex
         // mark the starting vertex as visited
+        visited[start] = true
         // loop as long as there is anything in the queue
-        // remove the first vertex from the queue and push it to visited
-        // if it is not inside visited, mark it as visited and enqueue that vertex
+        while (queue.length){
+            currentVertex = queue.shift()
+            // remove the first vertex from the queue and push it to visited
+            // if it is not inside visited, mark it as visited and enqueue that vertex
+            result.push(currentVertex)
+            this.adjacencyList[currentVertex].forEach(neighbor => {
+                if (!visited[neighbor]){
+                    visited[neighbor] = true
+                    queue.push(neighbor)
+                }
+            })
+        }
+        return result
     }
 
 }
