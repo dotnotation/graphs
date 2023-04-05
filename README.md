@@ -59,3 +59,14 @@ Graphs:
 			- remove edge O(|e|)
 			- query O(|v| + |e|) 
 			- storage O(|v| + |e|)
+- Traversal
+	- visiting, updating, checking each and every vertex in a graph
+	- remember there is no root like in a tree
+	- depth first search
+		- explore as far as possible down one branch before backtracking
+		- you pick a neighbor and then go to the neighbor of that vertex 
+			- so in the picture below we would start at 0 go to 1 and then 2 and then 3
+	- breadth first search
+		- you go to the immediate neighbors of one vertex
+			- so in the below picture you would start at 0 and go to 1 and 4 before going to any other vertex 
+			- traversal via height or how many jumps away from the root
