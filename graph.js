@@ -102,8 +102,11 @@ class Graph {
             // FIFO
         // accepts a starting vertex
         // create a queue and place the starting vertex in it
-        // create an array to store the nodes visited
+        const queue = [start]
+        // create an array to store the result
+        const result = []
         // create an object to store nodes visited
+        const visited = {}
         // mark the starting vertex as visited
         // loop as long as there is anything in the queue
         // remove the first vertex from the queue and push it to visited
