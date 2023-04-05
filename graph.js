@@ -96,8 +96,18 @@ class Graph {
         // this will be in a different order than our recursive function due to pop
     }
 
-    breadthFirst(){
+    breadthFirst(start){
         // will be using a queue instead of a stack
+            // so will be using push and shift
+            // FIFO
+        // accepts a starting vertex
+        // create a queue and place the starting vertex in it
+        // create an array to store the nodes visited
+        // create an object to store nodes visited
+        // mark the starting vertex as visited
+        // loop as long as there is anything in the queue
+        // remove the first vertex from the queue and push it to visited
+        // if it is not inside visited, mark it as visited and enqueue that vertex
     }
 
 }
